@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Carrinho de Compras</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let product of cartItems">
+      <ion-label>{{ product.name }}</ion-label>
+      <ion-input type="number" [(ngModel)]="product.quantity"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="goToCheckout()">Ir para o Checkout</ion-button>
+</ion-content>

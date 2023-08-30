@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Carrinho de Compras</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let product of getCartItems()">
+      <ion-label>{{ product.name }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" [href]="getWhatsAppMessage()">Enviar Pedido</ion-button>
+</ion-content>
