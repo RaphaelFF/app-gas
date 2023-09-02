@@ -1,13 +1,13 @@
 export class Product {
     id: number;
     name: string;
-    quantity: number;
+    quantity: string;
     // Adicione mais propriedades conforme necessário
   
-    constructor(id: number, name: string) {
+    constructor(id: number, name: string, quantity: string) {
         this.id = id;
         this.name = name;
-        this.quantity = 0;
+        this.quantity = quantity;
       }
 }
 

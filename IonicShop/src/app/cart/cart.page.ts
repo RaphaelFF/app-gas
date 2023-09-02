@@ -9,7 +9,7 @@ import { CartService } from '../services/cart.service';
 })
 export class CartPage {
   public cartItems: any[] = [];
-  constructor(private cartService: CartService, private router: Router) {}
+  constructor(public cartService: CartService, public router: Router) {}
 
   goToCheckout() {
     this.router.navigate(['/checkout']); // Certifique-se de que o 'checkout' corresponda à rota definida no app-routing.module.ts

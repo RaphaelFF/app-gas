@@ -8,14 +8,14 @@ import { CartService } from '../services/cart.service';
   styleUrls: ['./checkout.page.scss'],
 })
 export class CheckoutPage {
-  constructor(public cartService: CartService, private router: Router) {}
+  constructor(public cartService: CartService, public router: Router) {}
 
   goToCheckout() {
     const cartItems = this.cartService.getCartItems();
-    let message = 'Pedido de Produtos:\n';
+    let message = 'Pedido de Produtos:  \n';
 
     for (const item of cartItems) {
-      message += item.name + '\n';
+      message += item.name += item.quantity +   '\n';
     }
 
     const encodedMessage = encodeURIComponent(message);

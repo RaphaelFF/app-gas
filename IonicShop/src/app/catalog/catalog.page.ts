@@ -10,13 +10,13 @@ import { CartService } from '../services/cart.service';
 })
 export class CatalogPage {
   products: Product[] = [
-    { id: 1, name: 'Produto 1', quantity: 0 }, // Certifique-se de incluir a propriedade quantity
-    { id: 2, name: 'Produto 2', quantity: 0 }, // Certifique-se de incluir a propriedade quantity
-    { id: 3, name: 'Produto 3', quantity: 0 }, // Certifique-se de incluir a propriedade quantity
+    { id: 1, name: 'Gas = tamanho grande', quantity: 'https://github.com/RaphaelFF/teste/blob/main/assets/IMG_1999.JPG?raw=true' }, // Certifique-se de incluir a propriedade quantity
+    { id: 2, name: 'Produto 2', quantity:  'aula'}, // Certifique-se de incluir a propriedade quantity
+    { id: 3, name: 'Produto 3', quantity:  'aula'}, // Certifique-se de incluir a propriedade quantity
     // ...
   ];
 
-  constructor(private cartService: CartService, private router: Router) {}
+  constructor(public cartService: CartService, public router: Router) {}
 
   toggleProduct(product: Product) {
     if (this.cartService.isInCart(product)) {
